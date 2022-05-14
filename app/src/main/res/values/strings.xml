@@ -90,14 +90,36 @@
     <string name="ON_THE_PHONE">通话中</string>
     <!--登出中-->
     <string name="LOGGING_OUT">登出中...</string>
+    <!--注册中-->
+    <string name="REGISTERING">注册中...</string>
+    <!--登录中-->
+    <string name="LOGGING">登陆中...</string>
+    <!--自动登陆中-->
+    <string name="LOGGING_AUTO">自动登陆中...</string>
+    <!--正在初始化-->
+    <string name="INITIALIZING">正在初始化...</string>
     <!--不能登出-->
     <string name="UNABLE_TO_LOGGING_OUT">不能登出</string>
     <!--登出失败-->
     <string name="LOGOUT_FAILED">登出失败</string>
+    <!--注册失败-->
+    <string name="REGISTER_FAILED">注册失败</string>
     <!--不能呼叫-->
     <string name="UNABLE_TO_CALL">不能呼叫</string>
+    <!--不能登录-->
+    <string name="UNABLE_TO_LOG">不能登录</string>
+    <!--登录失败-->
+    <string name="LOG_FAILED">登录失败</string>
+    <!--不能继续注册-->
+    <string name="UNABLE_TO_CONTINUE_REGISTER">不能继续注册</string>
+    <!--不能自动登录-->
+    <string name="UNABLE_TO_LOG_AUTO">不能自动登录</string>
+    <!--注册成功-->
+    <string name="REGISTER_SUCCESS">注册成功</string>
     <!--错误码-->
     <string name="ERROR_CODE">错误码</string>
+    <!--没有有效的账号-->
+    <string name="NO_VALID_ACCOUNT">没有有效的账号</string>
     <!--等待对方接听-->
     <string name="WAITING_FOR_THE_OTHER_TO_ANSWER">等待对方接听...</string>
     <!--对方已挂断-->

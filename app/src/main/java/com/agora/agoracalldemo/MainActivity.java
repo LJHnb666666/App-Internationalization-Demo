@@ -28,6 +28,7 @@ import com.agora.agoracallkit.beans.UidInfoBean;
 import com.agora.agoracallkit.callkit.AgoraCallKit;
 import com.agora.agoracallkit.callkit.CallKitAccount;
 import com.agora.agoracallkit.callkit.ICallKitCallback;
+import com.hyphenate.easeim.R;
 import com.hyphenate.easeim.databinding.ActivityMainBinding;
 
 
@@ -173,7 +174,7 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
     void onBtnRegister()
     {
         //显示进度对话框
-        mDlgBuilder.updateMessage("注册中...");
+        mDlgBuilder.updateMessage(getString(R.string.REGISTERING));
         mProgressDlg.show();
 
         //注册账号
@@ -184,7 +185,7 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
         int ret = AgoraCallKit.getInstance().accountRegister(registerAccount);
         if (ret != AgoraCallKit.ERR_NONE) {
             mProgressDlg.dismiss();
-            popupMessage("不能继续注册, 错误码: " + ret);
+            popupMessage(getString(R.string.UNABLE_TO_CONTINUE_REGISTER) + "," + getString(R.string.ERROR_CODE) + ": " + ret);
             return;
         }
     }
@@ -195,7 +196,7 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
     void onBtnLogin()
     {
         //显示进度对话框
-        mDlgBuilder.updateMessage("登录中...");
+        mDlgBuilder.updateMessage(getString(R.string.LOGGING));
         mProgressDlg.show();
 
         int roleType = ((PushApplication) getApplication()).getRoleType();
@@ -205,7 +206,7 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
         int ret = AgoraCallKit.getInstance().accountLogIn(logInAccount);
         if (ret != AgoraCallKit.ERR_NONE) {
             mProgressDlg.dismiss();
-            popupMessage("不能登录, 错误码: " + ret);
+            popupMessage(getString(R.string.UNABLE_TO_LOG) + "," + getString(R.string.ERROR_CODE) + ": " + ret);
             return;
         }
     }
@@ -243,7 +244,7 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
         mDblTalk = false;
         mChoicedRole = 0;
 
-        mDlgBuilder.updateMessage("正在初始化...");
+        mDlgBuilder.updateMessage(getString(R.string.INITIALIZING));
         mProgressDlg.show();
         mMsgHandler.removeMessages(MSGID_ROLE_CHOICED);
         mMsgHandler.sendEmptyMessage(MSGID_ROLE_CHOICED);
@@ -269,13 +270,13 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
 
 
         //先尝试自动登录，如果自动登录成功，直接进入拨号页面
-        mDlgBuilder.updateMessage("自动登录中...");
+        mDlgBuilder.updateMessage(getString(R.string.LOGGING_AUTO));
         mProgressDlg.show();
 
         int ret = AgoraCallKit.getInstance().accountAutoLogin();
         if (ret != AgoraCallKit.ERR_NONE) {
             mProgressDlg.dismiss();
-            popupMessage("不能自动登录, 错误码: " + ret);
+            popupMessage(getString(R.string.UNABLE_TO_LOG_AUTO) + "," + getString(R.string.ERROR_CODE) + ": " + ret);
             return;
         }
     }
@@ -317,10 +318,10 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
                 mProgressDlg.dismiss();
 
                 if (errCode != AgoraCallKit.ERR_NONE)   {
-                    popupMessage("账号: " + account.getName() + " 注册失败");
+                    popupMessage(getString(R.string.ACCOUNT) + " " + account.getName() + " " + getString(R.string.REGISTER_FAILED));
 
                 } else  {
-                    popupMessage("账号: " + account.getName() + " 注册成功，正在登录中...");
+                    popupMessage(getString(R.string.ACCOUNT) + " " + account.getName() + " " + getString(R.string.REGISTER_SUCCESS) + "," + getString(R.string.LOGGING));
                     onBtnLogin();
                 }
             }
@@ -336,12 +337,12 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
                 mProgressDlg.dismiss();
 
                 if (account == null) {
-                    popupMessage("登录失败，没有有效的账号");
+                    popupMessage(getString(R.string.LOGOUT_FAILED) + "," + getString(R.string.NO_VALID_ACCOUNT));
                     return;
                 }
 
                 if (errCode != AgoraCallKit.ERR_NONE)   {
-                    popupMessage("账号: " + account.getName() + " 登录失败");
+                    popupMessage(getString(R.string.ACCOUNT) + " " + account.getName() + " " + getString(R.string.LOG_FAILED));
 
                 } else  {
                     // 切换到登录成功界面
