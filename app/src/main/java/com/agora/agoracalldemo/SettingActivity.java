@@ -20,6 +20,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.agora.agoracallkit.callkit.AgoraCallKit;
+import com.hyphenate.easeim.R;
 import com.hyphenate.easeim.databinding.ActivitySettingBinding;
 
 import java.util.ArrayList;
@@ -141,9 +142,9 @@ public class SettingActivity extends AppCompatActivity  {
                 int ret = AgoraCallKit.getInstance().setTalkPrivateParam(privParam);
                 if (ret == AgoraCallKit.ERR_NONE) {
                     mApplication.setAudioCodecIndex(position);
-                    popupMessage("设置音频格式成功, privParam=" + privParam);
+                    popupMessage(getString(R.string.FORMAT_AUDIO) + getString(R.string.SUCCESS) + ", privParam=" + privParam);
                 } else {
-                    popupMessage("设置音频格式失败, privParam=" + privParam);
+                    popupMessage(getString(R.string.FORMAT_AUDIO) + getString(R.string.FAILED) + ", privParam=" + privParam);
                 }
             }
 
@@ -163,9 +164,9 @@ public class SettingActivity extends AppCompatActivity  {
                 }
                 int ret = AgoraCallKit.getInstance().setTalkPrivateParam(privParam);
                 if (ret == AgoraCallKit.ERR_NONE) {
-                    popupMessage("设置私参成功!");
+                    popupMessage(getString(R.string.SET_PRIVATE_PARAMETER) + getString(R.string.SUCCESS) + "!");
                 } else {
-                    popupMessage("设置私参失败!");
+                    popupMessage(getString(R.string.SET_PRIVATE_PARAMETER) + getString(R.string.FAILED) + "!");
                 }
             }
         });

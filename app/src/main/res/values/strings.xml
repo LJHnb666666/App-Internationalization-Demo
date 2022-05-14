@@ -80,12 +80,16 @@
     <string name="SUCCESS">成功</string>
     <!--失败-->
     <string name="FAILED">失败</string>
-    <!--失败-->
+    <!--错误-->
     <string name="ERROR">错误</string>
     <!--确定-->
     <string name="DETERMINE">确定</string>
     <!--取消-->
     <string name="CANCEL">取消</string>
+    <!--呼叫通知-->
+    <string name="CALL_NOTIFICATION">呼叫通知</string>
+    <!--正在呼叫-->
+    <string name="CALLING">正在呼叫</string>
     <!--通话中-->
     <string name="ON_THE_PHONE">通话中</string>
     <!--登出中-->
@@ -130,6 +134,8 @@
     <string name="THE_OTHER_REFUSED">您呼叫用户拒绝，请稍后再拨！</string>
     <!--您呼叫用户无人接听，请稍后再拨！-->
     <string name="NO_ANSWER">您呼叫用户无人接听，请稍后再拨！</string>
+    <!--点击接听-->
+    <string name="CLICK_TO_ANSWER">请点击接听...</string>
     <!--账号在其他设备登录，本地立即退出-->
     <string name="ACCOUNT_REMOTE_LOGIN">账号在其他设备登录，本地立即退出！</string>
     <!--当前设备账号-->
@@ -174,4 +180,8 @@
     <string name="START_CLOUD_RECORDING">开始启动云录制......</string>
     <!--云录制结束，文件列表：-->
     <string name="CLOUD_RECORDING_FINISHED_AND_FILE_LIST">云录制结束，文件列表：</string>
+    <!--设置音频格式-->
+    <string name="FORMAT_AUDIO">设置音频格式</string>
+    <!--设置私参-->
+    <string name="SET_PRIVATE_PARAMETER">设置私参</string>
 </resources>

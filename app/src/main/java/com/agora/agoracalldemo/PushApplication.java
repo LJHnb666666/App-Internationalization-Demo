@@ -32,6 +32,7 @@ import com.agora.agoracallkit.callkit.ICallKitCallback;
 import com.agora.agoracallkit.utils.PreferenceManager;
 import com.agora.agoracalldemo.ui.EaseNotifier;
 import com.agora.agoracalldemo.ui.ActivityLifecycleCallback;
+import com.hyphenate.easeim.R;
 
 import java.util.List;
 
@@ -202,7 +203,9 @@ public class PushApplication extends BaseApplication implements ICallKitCallback
             Intent activityIntent = new Intent(this, CalledActivity.class);
             activityIntent.putExtra("caller_name", peer_account.getName());
             EaseNotifier.getInstance().notify(activityIntent,
-                    "呼叫通知", peer_account.getName() + "正在呼叫，请点击接听....");
+                    getString(R.string.CALL_NOTIFICATION), peer_account.getName() +
+                            getString(R.string.CALLING) + "," +
+                            getString(R.string.CLICK_TO_ANSWER));
         }
     }
 

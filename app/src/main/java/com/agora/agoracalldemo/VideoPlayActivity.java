@@ -28,6 +28,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.agora.agoracallkit.callkit.AgoraCallKit;
 import com.agora.agoracallkit.callkit.CallKitAccount;
 import com.agora.agoracallkit.callkit.ICallKitCallback;
+import com.hyphenate.easeim.R;
 import com.hyphenate.easeim.databinding.ActivityVideoPlayBinding;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder;
@@ -240,7 +241,7 @@ public class VideoPlayActivity extends AppCompatActivity implements ICallKitCall
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("账号在其他设备登录,本地立即退出!");
+                popupMessage(getString(R.string.ACCOUNT_REMOTE_LOGIN));
 
                 // 直接退出当前界面，返回到登录界面，清空Activity堆栈
                 new android.os.Handler(Looper.getMainLooper()).postDelayed(
@@ -279,7 +280,7 @@ public class VideoPlayActivity extends AppCompatActivity implements ICallKitCall
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("接收到来自: " + peer_account.getName() + " 的告警消息: " + alarmMsg);
+                popupMessage(getString(R.string.RECEIVE_FROM) + " " + peer_account.getName() + " " + getString(R.string.ALARM_MESSAGE) + alarmMsg);
 
                 if (mDeviceId.equals(peer_account.getName())) {
                     // 刷新当前设备告警列表
