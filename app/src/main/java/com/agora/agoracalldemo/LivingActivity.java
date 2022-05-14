@@ -109,27 +109,27 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
 
         // 显示设备名称
         String caller = this.getIntent().getStringExtra("caller_name");
-        mBinding.tvDevName.tvPrompt.setText("设备名称: ");
+        mBinding.tvDevName.tvPrompt.setText(getString(R.string.EQUIPMENT_NAME));
         mBinding.tvDevName.tvText.setText(caller);
 
         // 初始化网络状态
-        mBinding.tvNetStatus.tvPrompt.setText("网络状态: ");
+        mBinding.tvNetStatus.tvPrompt.setText(getString(R.string.NETWORK_STATUS));
         mBinding.tvNetStatus.tvText.setText("正常");
 
         // 初始化分辨率
-        mBinding.tvResolution.tvPrompt.setText("分辨率: ");
+        mBinding.tvResolution.tvPrompt.setText(getString(R.string.RESOLVING_POWER));
         mBinding.tvResolution.tvText.setText("720P");
 
         // 初始化帧率
-        mBinding.tvFramerate.tvPrompt.setText("帧率: ");
+        mBinding.tvFramerate.tvPrompt.setText(getString(R.string.FRAME_RATE));
         mBinding.tvFramerate.tvText.setText("15fps");
 
         // 初始化码率
-        mBinding.tvBitrate.tvPrompt.setText("码率: ");
+        mBinding.tvBitrate.tvPrompt.setText(getString(R.string.BIT_RATE));
         mBinding.tvBitrate.tvText.setText("0Kbps");
 
         // 初始化时延
-        mBinding.tvDelay.tvPrompt.setText("时延: ");
+        mBinding.tvDelay.tvPrompt.setText(getString(R.string.TIME_DELAY));
         mBinding.tvDelay.tvText.setText("50ms");
 
 
@@ -143,7 +143,7 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
         // 通话禁音按钮
         mVoiceMuted = false;
         mBinding.btnMute.ivBtnImg.setImageResource(R.mipmap.ic_unmute);
-        mBinding.btnMute.tvBtnText.setText("音频");
+        mBinding.btnMute.tvBtnText.setText(getString(R.string.AUDIO_FREQUENCY));
         AgoraCallKit.getInstance().mutePeerAudioStream(false);
         AgoraCallKit.getInstance().muteLocalAudioStream(false);
         mBinding.llMute.setOnClickListener(new View.OnClickListener() {
@@ -156,7 +156,7 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
 
         //挂断按钮
         mBinding.btnHangup.ivBtnImg.setImageResource(R.mipmap.ic_hangup);
-        mBinding.btnHangup.tvBtnText.setText("挂断");
+        mBinding.btnHangup.tvBtnText.setText(getString(R.string.HANG_UP));
         mBinding.llHangup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,7 +168,7 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
 
         // 变声按钮
         mBinding.btnEffect.ivBtnImg.setImageResource(R.mipmap.ic_audeffect);
-        mBinding.btnEffect.tvBtnText.setText("变声");
+        mBinding.btnEffect.tvBtnText.setText(getString(R.string.CHANGE_VOICE));
         mBinding.llEffect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -217,7 +217,8 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
         if ((AgoraCallKit.STATE_CALL_TALKING != state) &&
             (AgoraCallKit.STATE_CALL_DIALING != state) &&
             (AgoraCallKit.STATE_CALL_INCOMING != state)) {
-            popupMessage("对方已经挂断!");
+            //对方已经挂断
+            popupMessage(getString(R.string.THE_OTHER_HANG_UP));
             finish();
         }
 
@@ -287,17 +288,26 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
         final View effectView = inflater.inflate(R.layout.audio_effects, effectmBinding.getRoot());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("变 声")
+        builder.setTitle(getString(R.string.CHANGE_VOICE))
                .setView(effectView);
         AlertDialog dialog = builder.show();
+
+        String success = getString(R.string.SUCCESS);
+        String failed = getString(R.string.FAILED);
+        String set = getString(R.string.SET);
+        String soundEffect = getString(R.string.SOUND_EFFECT);
+        String originalSound = getString(R.string.ORIGINAL_SOUND);
+        String lolita = getString(R.string.LOLITA);
+        String juvenile = getString(R.string.JUVENILE);
+        String uncle = getString(R.string.UNCLE);
 
         effectmBinding.llOrg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
                 boolean ret = AgoraCallKit.getInstance().setLocalVoiceType(AgoraCallKit.VoiceType.NORMAL);
-                String result = (ret) ? "成功" : "失败";
-                popupMessage("设置 原声 音效" + result);
+                String result = (ret) ? success : failed;
+                popupMessage(set + " " + originalSound + " " + soundEffect + " " + result);
             }
         });
 
@@ -306,8 +316,8 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
             public void onClick(View v) {
                 dialog.dismiss();
                 boolean ret = AgoraCallKit.getInstance().setLocalVoiceType(AgoraCallKit.VoiceType.OLDMAN);
-                String result = (ret) ? "成功" : "失败";
-                popupMessage("设置 大叔 音效" + result);
+                String result = (ret) ? success : failed;
+                popupMessage(set + " " + uncle + " " + soundEffect + " " + result);
             }
         });
 
@@ -316,8 +326,8 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
             public void onClick(View v) {
                 dialog.dismiss();
                 boolean ret = AgoraCallKit.getInstance().setLocalVoiceType(AgoraCallKit.VoiceType.BABYGIRL);
-                String result = (ret) ? "成功" : "失败";
-                popupMessage("设置 萝莉 音效" + result);
+                String result = (ret) ? success : failed;
+                popupMessage(set + " " + lolita + " " + soundEffect + " " + result);
             }
         });
 
@@ -326,8 +336,8 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
             public void onClick(View v) {
                 dialog.dismiss();
                 boolean ret = AgoraCallKit.getInstance().setLocalVoiceType(AgoraCallKit.VoiceType.BABYBOY);
-                String result = (ret) ? "成功" : "失败";
-                popupMessage("设置 少年 音效" + result);
+                String result = (ret) ? success : failed;
+                popupMessage(set + " " + juvenile + " " + soundEffect + " " + result);
             }
         });
 
@@ -341,13 +351,13 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
         AgoraCallKit.NetworkStatus networkStatus = AgoraCallKit.getInstance().getNetworkStatus();
 
         // 更新码率
-        mBinding.tvBitrate.tvPrompt.setText("码率: ");
+        mBinding.tvBitrate.tvPrompt.setText(getString(R.string.BIT_RATE));
         //String bitrate = String.valueOf(networkStatus.txKBitRate + networkStatus.rxKBitRate);
         String bitrate = String.valueOf(networkStatus.txKBitRate);
         mBinding.tvBitrate.tvText.setText(bitrate + "Kbps");
 
         // 更新时延
-        mBinding.tvDelay.tvPrompt.setText("时延: ");
+        mBinding.tvDelay.tvPrompt.setText(getString(R.string.TIME_DELAY));
         String delay = String.valueOf(networkStatus.lastmileDelay + "ms");
         mBinding.tvDelay.tvText.setText(delay);
 
@@ -371,7 +381,7 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("账号在其他设备登录,本地立即退出!");
+                popupMessage(getString(R.string.ACCOUNT_REMOTE_LOGIN));
                 AgoraCallKit.getInstance().callHangup();  // 本地挂断处理
                 finish();  // 退出当前界面，返回到已经登录界面
             }
@@ -405,7 +415,7 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
                 // 立即退出频道
                 //mApplication.getTalkEngine().leaveChannel();
 
-                popupMessage("对方正在通话中，请稍后再拨！");
+                popupMessage(getString(R.string.THE_OTHER_ON_THE_PHONE));
                 finish();
             }
         });
@@ -419,9 +429,9 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
             @Override
             public void run() {
                 if (mConnected) {
-                    popupMessage("对方已挂断！");
+                    popupMessage(getString(R.string.THE_OTHER_HANG_UP));
                 } else {
-                    popupMessage("您呼叫用户拒绝，请稍后再拨！");
+                    popupMessage(getString(R.string.THE_OTHER_REFUSED));
                 }
                 finish();
             }
@@ -439,7 +449,7 @@ public class LivingActivity extends AppCompatActivity implements ICallKitCallbac
                 // 立即退出频道
                 //mApplication.getTalkEngine().leaveChannel();
 
-                popupMessage("您呼叫用户无人接听，请稍后再拨！");
+                popupMessage(getString(R.string.NO_ANSWER));
                 finish();
             }
         });

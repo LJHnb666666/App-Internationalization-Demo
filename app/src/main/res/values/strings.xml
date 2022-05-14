@@ -30,4 +30,60 @@
     <string name="BINDING_SERVER_URL">http://iot.sh2.agoralab.co/binding/v1</string>
     <!-- 离线/后台运行消息通知channel ID，安卓8.0以上需要 -->
     <string name="EASE_NOTIFIER_CHANNEL_ID">high_system</string>
+
+    <!--***************************以下是国际化用到的字段***************************-->
+    <!--*************************************************************************-->
+
+    <!--语言设置成功-->
+    <string name="LANGUAGE_SET_SUCCESS">设置成功</string>
+    <!--呼叫已经失效-->
+    <string name="CALL_IS_EXPIRED">呼叫已经失效！</string>
+    <!--设备名称-->
+    <string name="EQUIPMENT_NAME">设备名称</string>
+    <!--网络状态-->
+    <string name="NETWORK_STATUS">网络状态</string>
+    <!--正常-->
+    <string name="NORMAL">正常</string>
+    <!--分辨率-->
+    <string name="RESOLVING_POWER">分辨率</string>
+    <!--帧率-->
+    <string name="FRAME_RATE">帧率</string>
+    <!--码率-->
+    <string name="BIT_RATE">码率</string>
+    <!--时延-->
+    <string name="TIME_DELAY">时延</string>
+    <!--音频-->
+    <string name="AUDIO_FREQUENCY">音频</string>
+    <!--挂断-->
+    <string name="HANG_UP">挂断</string>
+    <!--变声-->
+    <string name="CHANGE_VOICE">变声</string>
+    <!--设置-->
+    <string name="SET">设置</string>
+    <!--音效-->
+    <string name="SOUND_EFFECT">音效</string>
+    <!--原声-->
+    <string name="ORIGINAL_SOUND">原声</string>
+    <!--大叔-->
+    <string name="UNCLE">大叔</string>
+    <!--萝莉-->
+    <string name="LOLITA">萝莉</string>
+    <!--少年-->
+    <string name="JUVENILE">少年</string>
+    <!--成功-->
+    <string name="SUCCESS">成功</string>
+    <!--失败-->
+    <string name="FAILED">失败</string>
+    <!--通话中-->
+    <string name="ON_THE_PHONE">通话中</string>
+    <!--对方已挂断-->
+    <string name="THE_OTHER_HANG_UP">对方已挂断!</string>
+    <!--对方正在通话中，请稍后再拨！-->
+    <string name="THE_OTHER_ON_THE_PHONE">对方正在通话中，请稍后再拨！</string>
+    <!--您呼叫用户拒绝，请稍后再拨！-->
+    <string name="THE_OTHER_REFUSED">您呼叫用户拒绝，请稍后再拨！</string>
+    <!--您呼叫用户无人接听，请稍后再拨！-->
+    <string name="NO_ANSWER">您呼叫用户无人接听，请稍后再拨！</string>
+    <!--账号在其他设备登录，本地立即退出-->
+    <string name="ACCOUNT_REMOTE_LOGIN">账号在其他设备登录，本地立即退出！</string>
 </resources>

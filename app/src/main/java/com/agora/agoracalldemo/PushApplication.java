@@ -15,10 +15,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Process;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+
+import com.agora.agoracalldemo.base.BaseApplication;
+import com.agora.agoracalldemo.util.LocaleUtil;
 import com.agora.agoracallkit.beans.UidInfoBean;
 import com.agora.agoracallkit.callkit.AgoraCallKit;
 import com.agora.agoracallkit.callkit.CallKitAccount;
@@ -31,7 +37,7 @@ import java.util.List;
 
 
 
-public class PushApplication extends Application implements ICallKitCallback {
+public class PushApplication extends BaseApplication implements ICallKitCallback {
     private static final String TAG = "DEMO/PushApplication";
     private static PushApplication instance = null;
     private static ActivityLifecycleCallback mLifeCycleCallbk = new ActivityLifecycleCallback();
@@ -68,6 +74,9 @@ public class PushApplication extends Application implements ICallKitCallback {
         //偏好设置初始化
         PreferenceManager.init(this);
 
+        //初始化语言设置
+        LocaleUtil.changeAppLanguage(this);
+
         //仅主进程运行一次
         if (isMainProcess(this)) {
             //获取applicationInfo标签内的数据
@@ -98,6 +107,13 @@ public class PushApplication extends Application implements ICallKitCallback {
         //android.support.multidex.MultiDex.install(this);
     }
 
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        //更改语言设置
+        LocaleUtil.setLanguage(BaseApplication.getContext(),newConfig);
+    }
 
     //判断是否在主进程
     private boolean isMainProcess(Context context) {

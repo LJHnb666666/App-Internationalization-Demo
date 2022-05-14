@@ -7,7 +7,7 @@
  * @date 2021-10-27
  * @license Copyright (C) 2021 AgoraIO Inc. All rights reserved.
  */
-package com.agora.agoracalldemo;
+package com.agora.agoracalldemo.base;
 
 
 import android.Manifest;

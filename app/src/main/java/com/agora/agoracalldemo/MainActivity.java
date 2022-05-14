@@ -11,30 +11,24 @@
  */
 package com.agora.agoracalldemo;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.widget.AppCompatEditText;
+
+import com.agora.agoracalldemo.base.BaseActivity;
+import com.agora.agoracalldemo.util.LocaleUtil;
 import com.agora.agoracallkit.beans.UidInfoBean;
 import com.agora.agoracallkit.callkit.AgoraCallKit;
 import com.agora.agoracallkit.callkit.CallKitAccount;
 import com.agora.agoracallkit.callkit.ICallKitCallback;
-import com.hyphenate.easeim.R;
 import com.hyphenate.easeim.databinding.ActivityMainBinding;
-
-import java.util.ArrayList;
 
 
 public class MainActivity extends BaseActivity implements ICallKitCallback {
@@ -79,6 +73,8 @@ public class MainActivity extends BaseActivity implements ICallKitCallback {
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
         mApplication = (PushApplication) getApplication();
+
+        LocaleUtil.changeAppLanguage(this);
 
         mMsgHandler = new Handler(this.getMainLooper())
         {

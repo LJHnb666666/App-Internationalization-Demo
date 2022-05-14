@@ -24,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.agora.agoracallkit.callkit.AgoraCallKit;
 import com.agora.agoracallkit.callkit.CallKitAccount;
 import com.agora.agoracallkit.callkit.ICallKitCallback;
+import com.hyphenate.easeim.R;
 import com.hyphenate.easeim.databinding.ActivityCalledBinding;
 
 public class CalledActivity extends  AppCompatActivity implements ICallKitCallback {
@@ -62,7 +63,7 @@ public class CalledActivity extends  AppCompatActivity implements ICallKitCallba
         if ((AgoraCallKit.STATE_CALL_TALKING != state) &&
                 (AgoraCallKit.STATE_CALL_DIALING != state) &&
                 (AgoraCallKit.STATE_CALL_INCOMING != state)) {
-            popupMessage("呼叫已经失效!");
+            popupMessage(getString(R.string.CALL_IS_EXPIRED));
             finish();
         }
     }
@@ -92,7 +93,7 @@ public class CalledActivity extends  AppCompatActivity implements ICallKitCallba
         mBinding.nvTitleBar.ivBack.setVisibility(View.INVISIBLE);
 
         // 显示呼叫者信息
-        mBinding.tvDevName.tvPrompt.setText("设备名称: ");
+        mBinding.tvDevName.tvPrompt.setText(getString(R.string.EQUIPMENT_NAME));
         mBinding.tvDevName.tvText.setText(caller);
 
         // 接听按钮
@@ -106,7 +107,7 @@ public class CalledActivity extends  AppCompatActivity implements ICallKitCallba
                 // 跳转到通话页面
                 Intent activityIntent = new Intent(CalledActivity.this, LivingActivity.class);
                 activityIntent.putExtra("caller_name", caller);
-                activityIntent.putExtra("call_state", "通话中...");
+                activityIntent.putExtra("call_state", getString(R.string.ON_THE_PHONE));
                 activityIntent.putExtra("answer", true);
                 startActivity(activityIntent);
                 finish();
@@ -144,7 +145,7 @@ public class CalledActivity extends  AppCompatActivity implements ICallKitCallba
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("账号在其他设备登录,本地立即退出!");
+                popupMessage(getString(R.string.ACCOUNT_REMOTE_LOGIN));
                 AgoraCallKit.getInstance().callHangup();  // 本地挂断处理
                 finish();  // 退出当前界面，返回到已经登录界面
             }
@@ -159,7 +160,7 @@ public class CalledActivity extends  AppCompatActivity implements ICallKitCallba
                 // 立即退出频道
                 //mApplication.getTalkEngine().leaveChannel();
 
-                popupMessage("对方正在通话中，请稍后再拨！");
+                popupMessage(getString(R.string.THE_OTHER_ON_THE_PHONE));
                 finish();
             }
         });
@@ -170,7 +171,7 @@ public class CalledActivity extends  AppCompatActivity implements ICallKitCallba
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("您呼叫用户拒绝，请稍后再拨！");
+                popupMessage(getString(R.string.THE_OTHER_REFUSED));
                 finish();
             }
         });
@@ -184,7 +185,7 @@ public class CalledActivity extends  AppCompatActivity implements ICallKitCallba
                 // 立即退出频道
                 //mApplication.getTalkEngine().leaveChannel();
 
-                popupMessage("您呼叫用户无人接听，请稍后再拨！");
+                popupMessage(getString(R.string.NO_ANSWER));
                 finish();
             }
         });
