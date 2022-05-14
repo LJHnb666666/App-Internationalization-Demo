@@ -137,16 +137,16 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         assert (localAccount != null);
         int roleType = ((PushApplication) getApplication()).getRoleType();
         if (UidInfoBean.TYPE_MAP_DEVICE == roleType) {
-            localName = "当前设备账号: " + localAccount.getName();
+            localName = getString(R.string.CURRENT_EQUITMENT_ACCOUNT) + localAccount.getName();
             mBinding.btnCallDev.setChecked(false);
             mBinding.btnCallUsr.setChecked(true);
         } else {
-            localName = "当前用户账号: " + localAccount.getName();
+            localName = getString(R.string.CURRENT_USER_ACCOUNT) + localAccount.getName();
             mBinding.btnCallDev.setChecked(true);
             mBinding.btnCallUsr.setChecked(false);
         }
         mLocalAccountWgt.setText(localName);
-        mCallAccountWgt.setHint("要呼叫的用户或设备账号: ");
+        mCallAccountWgt.setHint(getString(R.string.USER_OR_EQUIPMENT_ACCOUNT_TO_CALL));
 
 
         // 登出按钮事件
@@ -254,11 +254,11 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         final EditText etDevice3 = (EditText)bindEntryView.findViewById(R.id.et_device3);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("输入要绑定的设备ID: ")
+        builder.setTitle(getString(R.string.ENTER_THE_EQUIPMENT_ID_TO_BIND))
                 .setIcon(android.R.drawable.ic_menu_add)
                 .setView(bindEntryView)
-                .setNegativeButton("取消", null)
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                .setNegativeButton(getString(R.string.CANCEL), null)
+                .setPositiveButton(getString(R.string.DETERMINE), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         String deviceId1 = etDevice1.getText().toString();
                         String deviceId2 = etDevice2.getText().toString();
@@ -300,11 +300,11 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         final EditText etDevice3 = (EditText)bindEntryView.findViewById(R.id.et_device3);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("输入要解绑的设备ID: ")
+        builder.setTitle(getString(R.string.ENTER_THE_EQUIPMENT_ID_TO_UNBIND))
                 .setIcon(android.R.drawable.ic_menu_add)
                 .setView(bindEntryView)
-                .setNegativeButton("取消", null)
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                .setNegativeButton(getString(R.string.CANCEL), null)
+                .setPositiveButton(getString(R.string.DETERMINE), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         String deviceId1 = etDevice1.getText().toString();
                         String deviceId2 = etDevice2.getText().toString();
@@ -349,14 +349,14 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
      */
     void onBtnLogout() {
         //显示loading对话框
-        mDlgBuilder.updateMessage("登出中...");
+        mDlgBuilder.updateMessage(getString(R.string.LOGGING_OUT));
         mProgressDlg.show();
 
         // 登出操作
         int ret = AgoraCallKit.getInstance().accountLogOut();
         if (ret != AgoraCallKit.ERR_NONE) {
             mProgressDlg.dismiss();
-            popupMessage("不能登出, 错误码: " + ret);
+            popupMessage(getString(R.string.UNABLE_TO_LOGGING_OUT) + ","+getString(R.string.ERROR_CODE)+ ":" + ret);
             return;
         }
     }
@@ -380,7 +380,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         int ret = AgoraCallKit.getInstance().callDial(dialList, "I'm a Agorain!");
         if (ret != AgoraCallKit.ERR_NONE) {
             mProgressDlg.dismiss();
-            popupMessage("不能呼叫, 错误码: " + ret);
+            popupMessage(getString(R.string.UNABLE_TO_CALL) + ","+getString(R.string.ERROR_CODE)+ ":" + ret);
             return;
         }
     }
@@ -393,11 +393,11 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         final EditText inputEditText = new EditText(this);
         inputEditText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(50)});
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("输入要告警的消息: ")
+        builder.setTitle(getString(R.string.ENTER_THE_INFORMATION_TO_BE_ALARMED))
                 .setIcon(android.R.drawable.ic_menu_add)
                 .setView(inputEditText)
-                .setNegativeButton("取消", null)
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                .setNegativeButton(getString(R.string.CANCEL), null)
+                .setPositiveButton(getString(R.string.DETERMINE), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         String inputMessage = inputEditText.getText().toString();
                         if (inputMessage.isEmpty()) {
@@ -407,7 +407,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
                         int ret = AgoraCallKit.getInstance().triggerAlarm(inputMessage);
                         if (ret != AgoraCallKit.ERR_NONE) {
                             mProgressDlg.dismiss();
-                            popupMessage("不能触发告警，ret=" + ret);
+                            popupMessage(getString(R.string.DETERMINE) + ",ret=" + ret);
                             return;
                         }
 
@@ -464,7 +464,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         int ret = AgoraCallKit.getInstance().queryAlarmsFromServer(queryParam);
         if (ret != AgoraCallKit.ERR_NONE) {
             mProgressDlg.dismiss();
-            popupMessage("不能查询告警记录，ret=" + ret);
+            popupMessage(getString(R.string.CANNOT_QUERY_ALARM) + ",ret=" + ret);
             return;
         }
 
@@ -584,7 +584,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("账号在其他设备登录,本地立即退出!");
+                popupMessage(getString(R.string.ACCOUNT_REMOTE_LOGIN));
                 finish();
             }
         });
@@ -598,7 +598,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
                 mProgressDlg.dismiss();
 
                 if (errCode != AgoraCallKit.ERR_NONE)   {
-                    popupMessage("账号: " + account.getName() + " 登出失败");
+                    popupMessage(getString(R.string.ACCOUNT) + account.getName() + " " + getString(R.string.LOGOUT_FAILED));
 
                 } else  {
                     // 登出成功后直接退出当前界面，返回到主界面
@@ -618,13 +618,13 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
                 CallKitAccount dialAccount = dialAccountList.get(0);
 
                 if (errCode != AgoraCallKit.ERR_NONE)   {
-                    popupMessage("呼叫: " + dialAccount.getName() + " 错误");
+                    popupMessage(getString(R.string.CALL) + dialAccount.getName() + " " + getString(R.string.ERROR));
 
                 } else  {
                     // 跳转到等待接听界面
                     Intent activityIntent = new Intent(LoggedActivity.this, com.agora.agoracalldemo.LivingActivity.class);
                     activityIntent.putExtra("caller_name",dialAccount.getName());
-                    activityIntent.putExtra("call_state", "等待对方接听...");
+                    activityIntent.putExtra("call_state", getString(R.string.WAITING_FOR_THE_OTHER_TO_ANSWER));
                     startActivity(activityIntent);
                 }
             }
@@ -638,9 +638,9 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
             public void run() {
                 if (errCode == AgoraCallKit.ERR_NONE) {
                     refreshBindList(bindedDevList);
-                    popupMessage("绑定成功");
+                    popupMessage(getString(R.string.BIND_SUCCESS));
                 } else {
-                    popupMessage("绑定失败");
+                    popupMessage(getString(R.string.BIND_FAILED));
                 }
             }
         });
@@ -653,9 +653,9 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
             public void run() {
                 if (errCode == AgoraCallKit.ERR_NONE) {
                     refreshBindList(bindedDevList);
-                    popupMessage("解绑成功");
+                    popupMessage(getString(R.string.UNBIND_SUCCESS));
                 } else {
-                    popupMessage("解绑失败");
+                    popupMessage(getString(R.string.UNBIND_FAILED));
                 }
             }
         });
@@ -671,14 +671,14 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
                 refreshBindList(bindedDevList);
 
                 if (bindedDevList == null || bindedDevList.size() <= 0) {
-                    popupMessage("当前账号没有查询到绑定的设备！");
+                    popupMessage(getString(R.string.NO_BIND_EQUIPMENT_IN_ACCOUNT));
                 } else {
                     String devInfo = "";
                     for (int i = 0; i < bindedDevList.size(); i++) {
                         CallKitAccount devAccount = bindedDevList.get(i);
                         devInfo = devInfo +  devAccount.toString() + "\n";
                     }
-                    popupMessage("前账号绑定设备信息:\n" + devInfo);
+                    popupMessage(getString(R.string.BIND_EQUIPMENT_INFOR_PRE_ACCOUNT) + "\n" + devInfo);
                 }
             }
         });
@@ -693,14 +693,14 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
                 refreshBindList(bindedUserList);
 
                 if (bindedUserList == null || bindedUserList.size() <= 0) {
-                    popupMessage("当前账号没有查询到绑定的用户！");
+                    popupMessage(getString(R.string.NO_BIND_USER_IN_ACCOUNT));
                 } else {
                     String devInfo = "";
                     for (int i = 0; i < bindedUserList.size(); i++) {
                         CallKitAccount devAccount = bindedUserList.get(i);
                         devInfo = devInfo +  devAccount.toString() + "\n";
                     }
-                    popupMessage("前账号绑定设备信息:\n" + devInfo);
+                    popupMessage(getString(R.string.BIND_EQUIPMENT_INFOR_PRE_ACCOUNT) + "\n" + devInfo);
                 }
             }
         });
@@ -712,7 +712,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("开始启动云录制......");
+                popupMessage(getString(R.string.START_CLOUD_RECORDING));
             }
         });
     }
@@ -726,8 +726,8 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
                 for (CloudRecordResult.RecordFileInfo fileInfo : recordResult.mFileList) {
                     fileListText = fileListText + fileInfo.mFilePath + "\n";
                 }
-                fileListText = fileListText + "状态：" + recordResult.mUploadingStatus;
-                popupMessageLongTime("云录制结束，文件列表：\n" + fileListText);
+                fileListText = fileListText + getString(R.string.STATE) + recordResult.mUploadingStatus;
+                popupMessageLongTime(getString(R.string.CLOUD_RECORDING_FINISHED_AND_FILE_LIST) + "\n" + fileListText);
             }
         });
     }
@@ -738,9 +738,9 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
             @Override
             public void run() {
                 if (errCode == AgoraCallKit.ERR_NONE) {
-                    popupMessage("发送告警消息: " + alarmMsg + " 成功!");
+                    popupMessage(getString(R.string.SEND_ALARM_INFO) + alarmMsg + " " + getString(R.string.SUCCESS));
                 } else {
-                    popupMessage("发送告警消息: " + alarmMsg + " 失败!");
+                    popupMessage(getString(R.string.SEND_ALARM_INFO) + alarmMsg + " " + getString(R.string.FAILED));
                 }
             }
         });
@@ -752,7 +752,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("接收到来自: " + peer_account.getName() + " 的告警消息: " + alarmMsg);
+                popupMessage(getString(R.string.RECEIVE_FROM) + peer_account.getName() + getString(R.string.ALARM_MESSAGE) + alarmMsg);
             }
         });
     }
@@ -763,7 +763,7 @@ public class LoggedActivity extends AppCompatActivity implements ICallKitCallbac
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                popupMessage("查询到告警记录: " + alarmList.size() + " 个");
+                popupMessage(getString(R.string.ALARM_RECORDS_NUM_QUERIED_IS) + alarmList.size());
             }
         });
     }

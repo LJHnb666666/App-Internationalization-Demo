@@ -42,6 +42,12 @@
     <string name="EQUIPMENT_NAME">设备名称</string>
     <!--网络状态-->
     <string name="NETWORK_STATUS">网络状态</string>
+    <!--账号-->
+    <string name="ACCOUNT">账号:</string>
+    <!--状态-->
+    <string name="STATE">状态:</string>
+    <!--呼叫-->
+    <string name="CALL">呼叫:</string>
     <!--正常-->
     <string name="NORMAL">正常</string>
     <!--分辨率-->
@@ -74,8 +80,26 @@
     <string name="SUCCESS">成功</string>
     <!--失败-->
     <string name="FAILED">失败</string>
+    <!--失败-->
+    <string name="ERROR">错误</string>
+    <!--确定-->
+    <string name="DETERMINE">确定</string>
+    <!--取消-->
+    <string name="CANCEL">取消</string>
     <!--通话中-->
     <string name="ON_THE_PHONE">通话中</string>
+    <!--登出中-->
+    <string name="LOGGING_OUT">登出中...</string>
+    <!--不能登出-->
+    <string name="UNABLE_TO_LOGGING_OUT">不能登出</string>
+    <!--登出失败-->
+    <string name="LOGOUT_FAILED">登出失败</string>
+    <!--不能呼叫-->
+    <string name="UNABLE_TO_CALL">不能呼叫</string>
+    <!--错误码-->
+    <string name="ERROR_CODE">错误码</string>
+    <!--等待对方接听-->
+    <string name="WAITING_FOR_THE_OTHER_TO_ANSWER">等待对方接听...</string>
     <!--对方已挂断-->
     <string name="THE_OTHER_HANG_UP">对方已挂断!</string>
     <!--对方正在通话中，请稍后再拨！-->
@@ -86,4 +110,46 @@
     <string name="NO_ANSWER">您呼叫用户无人接听，请稍后再拨！</string>
     <!--账号在其他设备登录，本地立即退出-->
     <string name="ACCOUNT_REMOTE_LOGIN">账号在其他设备登录，本地立即退出！</string>
+    <!--当前设备账号-->
+    <string name="CURRENT_EQUITMENT_ACCOUNT">当前设备账号:</string>
+    <!--当前用户账号-->
+    <string name="CURRENT_USER_ACCOUNT">当前用户账号:</string>
+    <!--要呼叫的用户或设备账号-->
+    <string name="USER_OR_EQUIPMENT_ACCOUNT_TO_CALL">要呼叫的用户或设备账号:</string>
+    <!--输入要绑定的设备ID:-->
+    <string name="ENTER_THE_EQUIPMENT_ID_TO_BIND">输入要绑定的设备ID: </string>
+    <!--输入要解除绑定的设备ID:-->
+    <string name="ENTER_THE_EQUIPMENT_ID_TO_UNBIND">输入要解绑的设备ID: </string>
+    <!--绑定成功-->
+    <string name="BIND_SUCCESS">绑定成功</string>
+    <!--绑定失败-->
+    <string name="BIND_FAILED">绑定失败</string>
+    <!--解绑成功-->
+    <string name="UNBIND_SUCCESS">解绑成功</string>
+    <!--解绑失败-->
+    <string name="UNBIND_FAILED">解绑失败</string>
+    <!--当前账号没有查询到绑定的设备-->
+    <string name="NO_BIND_EQUIPMENT_IN_ACCOUNT">当前账号没有查询到绑定的设备!</string>
+    <!--当前账号没有查询到绑定的用户-->
+    <string name="NO_BIND_USER_IN_ACCOUNT">当前账号没有查询到绑定的用户!</string>
+    <!--前账号绑定设备信息-->
+    <string name="BIND_EQUIPMENT_INFOR_PRE_ACCOUNT">前账号绑定设备信息:</string>
+    <!--输入要告警的信息-->
+    <string name="ENTER_THE_INFORMATION_TO_BE_ALARMED">输入要告警的信息:</string>
+    <!--发送告警消息-->
+    <string name="SEND_ALARM_INFO">发送告警消息</string>
+    <!--不能触发告警-->
+    <string name="CANNOT_TRIGGER_ALARM">不能触发告警</string>
+    <!--不能查询告警记录-->
+    <string name="CANNOT_QUERY_ALARM">不能查询告警记录</string>
+    <!--查询到的告警记录数目为-->
+    <string name="ALARM_RECORDS_NUM_QUERIED_IS">查询到的告警记录数目为:</string>
+    <!--接收到来自-->
+    <string name="RECEIVE_FROM">接收到来自:</string>
+    <!--的告警信息-->
+    <string name="ALARM_MESSAGE">的告警消息: </string>
+    <!--开始启动云录制-->
+    <string name="START_CLOUD_RECORDING">开始启动云录制......</string>
+    <!--云录制结束，文件列表：-->
+    <string name="CLOUD_RECORDING_FINISHED_AND_FILE_LIST">云录制结束，文件列表：</string>
 </resources>
