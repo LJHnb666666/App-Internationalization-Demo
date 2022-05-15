@@ -1,2 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!--语言设置成功-->
+    <string name="LANGUAGE_SET_SUCCESS">Language Setting Succeeded</string>
+    <!--呼叫已经失效-->
+    <string name="CALL_IS_EXPIRED">The call has expired！</string>
+    <!--设备名称-->
+    <string name="EQUIPMENT_NAME">equipment Name</string>
+    <!--网络状态-->
+    <string name="NETWORK_STATUS">network Status</string>
+    <!--账号-->
+    <string name="ACCOUNT">account number:</string>
+    <!--状态-->
+    <string name="STATE">state:</string>
+    <!--呼叫-->
+    <string name="CALL">call:</string>
+    <!--正常-->
+    <string name="NORMAL">normal</string>
+    <!--分辨率-->
+    <string name="RESOLVING_POWER">resolving power</string>
+    <!--帧率-->
+    <string name="FRAME_RATE">frame rate</string>
+    <!--码率-->
+    <string name="BIT_RATE">bit rate</string>
+    <!--时延-->
+    <string name="TIME_DELAY">time delay</string>
+    <!--音频-->
+    <string name="AUDIO_FREQUENCY">audio frequency</string>
+    <!--挂断-->
+    <string name="HANG_UP">hang up</string>
+    <!--变声-->
+    <string name="CHANGE_VOICE">change of voice</string>
+    <!--设置-->
+    <string name="SET">set up</string>
+    <!--音效-->
+    <string name="SOUND_EFFECT">sound effect</string>
+    <!--原声-->
+    <string name="ORIGINAL_SOUND">original sound</string>
+    <!--大叔-->
+    <string name="UNCLE">uncle</string>
+    <!--萝莉-->
+    <string name="LOLITA">lolita</string>
+    <!--少年-->
+    <string name="JUVENILE">juvenile</string>
+    <!--成功-->
+    <string name="SUCCESS">success</string>
+    <!--失败-->
+    <string name="FAILED">fail</string>
+    <!--错误-->
+    <string name="ERROR">error</string>
+    <!--确定-->
+    <string name="DETERMINE">determine</string>
+    <!--取消-->
+    <string name="CANCEL">cancel</string>
+    <!--呼叫通知-->
+    <string name="CALL_NOTIFICATION">call notification</string>
+    <!--正在呼叫-->
+    <string name="CALLING">calling</string>
+    <!--通话中-->
+    <string name="ON_THE_PHONE">on the phone</string>
+    <!--登出中-->
+    <string name="LOGGING_OUT">logging out...</string>
+    <!--注册中-->
+    <string name="REGISTERING">registering...</string>
+    <!--登录中-->
+    <string name="LOGGING">logging in...</string>
+    <!--自动登陆中-->
+    <string name="LOGGING_AUTO">automatic login in progress...</string>
+    <!--正在初始化-->
+    <string name="INITIALIZING">initializing...</string>
+    <!--不能登出-->
+    <string name="UNABLE_TO_LOGGING_OUT">Cannot log out</string>
+    <!--登出失败-->
+    <string name="LOGOUT_FAILED">Logout failed</string>
+    <!--注册失败-->
+    <string name="REGISTER_FAILED">Registration failed</string>
+    <!--不能呼叫-->
+    <string name="UNABLE_TO_CALL">Cannot call</string>
+    <!--不能登录-->
+    <string name="UNABLE_TO_LOG">Cannot log in</string>
+    <!--登录失败-->
+    <string name="LOG_FAILED">Login failed</string>
+    <!--不能继续注册-->
+    <string name="UNABLE_TO_CONTINUE_REGISTER">Cannot continue registration</string>
+    <!--不能自动登录-->
+    <string name="UNABLE_TO_LOG_AUTO">Cannot log in automatically</string>
+    <!--注册成功-->
+    <string name="REGISTER_SUCCESS">Registration success</string>
+    <!--错误码-->
+    <string name="ERROR_CODE">error code</string>
+    <!--没有有效的账号-->
+    <string name="NO_VALID_ACCOUNT">no valid account</string>
+    <!--等待对方接听-->
+    <string name="WAITING_FOR_THE_OTHER_TO_ANSWER">Wait for the other party to answer...</string>
+    <!--对方已挂断-->
+    <string name="THE_OTHER_HANG_UP">The other party has hung up!</string>
+    <!--对方正在通话中，请稍后再拨！-->
+    <string name="THE_OTHER_ON_THE_PHONE">The other party is on the call, please try again later！</string>
+    <!--您呼叫用户拒绝，请稍后再拨！-->
+    <string name="THE_OTHER_REFUSED">Your call is rejected by the user, please try again later！</string>
+    <!--您呼叫用户无人接听，请稍后再拨！-->
+    <string name="NO_ANSWER">The user you called went unanswered, please try again later！</string>
+    <!--点击接听-->
+    <string name="CLICK_TO_ANSWER">Click to answer...</string>
+    <!--账号在其他设备登录，本地立即退出-->
+    <string name="ACCOUNT_REMOTE_LOGIN">The account is already logged in on another device, log out immediately locally！</string>
+    <!--当前设备账号-->
+    <string name="CURRENT_EQUITMENT_ACCOUNT">current device account:</string>
+    <!--当前用户账号-->
+    <string name="CURRENT_USER_ACCOUNT">current user account:</string>
+    <!--要呼叫的用户或设备账号-->
+    <string name="USER_OR_EQUIPMENT_ACCOUNT_TO_CALL">user or device account to call:</string>
+    <!--输入要绑定的设备ID:-->
+    <string name="ENTER_THE_EQUIPMENT_ID_TO_BIND">Enter the device ID to bind: </string>
+    <!--输入要解除绑定的设备ID:-->
+    <string name="ENTER_THE_EQUIPMENT_ID_TO_UNBIND">Enter the device ID to unbind: </string>
+    <!--绑定成功-->
+    <string name="BIND_SUCCESS">binding succeeded</string>
+    <!--绑定失败-->
+    <string name="BIND_FAILED">bind failed</string>
+    <!--解绑成功-->
+    <string name="UNBIND_SUCCESS">Unbind successfully</string>
+    <!--解绑失败-->
+    <string name="UNBIND_FAILED">Unbind failed</string>
+    <!--当前账号没有查询到绑定的设备-->
+    <string name="NO_BIND_EQUIPMENT_IN_ACCOUNT">The current account does not query the bound device!</string>
+    <!--当前账号没有查询到绑定的用户-->
+    <string name="NO_BIND_USER_IN_ACCOUNT">The current account does not query the bound user!</string>
+    <!--前账号绑定设备信息-->
+    <string name="BIND_EQUIPMENT_INFOR_PRE_ACCOUNT">Device information bound to the previous account:</string>
+    <!--输入要告警的信息-->
+    <string name="ENTER_THE_INFORMATION_TO_BE_ALARMED">Enter the information to be alerted:</string>
+    <!--发送告警消息-->
+    <string name="SEND_ALARM_INFO">Send alert message</string>
+    <!--不能触发告警-->
+    <string name="CANNOT_TRIGGER_ALARM">Cannot trigger alert</string>
+    <!--不能查询告警记录-->
+    <string name="CANNOT_QUERY_ALARM">Unable to query alarm records</string>
+    <!--查询到的告警记录数目为-->
+    <string name="ALARM_RECORDS_NUM_QUERIED_IS">The number of alarm records queried is:</string>
+    <!--接收到来自-->
+    <string name="RECEIVE_FROM">Received from:</string>
+    <!--的告警信息-->
+    <string name="ALARM_MESSAGE">warning message: </string>
+    <!--开始启动云录制-->
+    <string name="START_CLOUD_RECORDING">Start cloud recording......</string>
+    <!--云录制结束，文件列表：-->
+    <string name="CLOUD_RECORDING_FINISHED_AND_FILE_LIST">Cloud recording is over, the file list is：</string>
+    <!--设置音频格式-->
+    <string name="FORMAT_AUDIO">Set audio format</string>
+    <!--设置私参-->
+    <string name="SET_PRIVATE_PARAMETER">Set up private parameters</string>
+</resources>

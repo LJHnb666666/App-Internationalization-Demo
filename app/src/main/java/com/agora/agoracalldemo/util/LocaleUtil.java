@@ -17,7 +17,7 @@ import java.util.Locale;
  * Created by didiwei on 2022/5/12
  * desc: 用于设置保存语言以及获取当前语言，重启App等操作
  *
- * 因为目前demo还没有设置语言的功能，所以与SP加载本地保存语言的相关操作其实目前都用不上，只是加载系统默认的语言类型。
+ * 因为目前demo还没有设置语言的功能，所以与SP加载本地保存语言的相关操作其实目前都用不上，只用到了 加载系统默认的语言类型 这个功能。
  */
 public class LocaleUtil {
     /**
