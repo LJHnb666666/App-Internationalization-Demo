@@ -9,6 +9,8 @@ import com.agora.agoracalldemo.base.BaseApplication;
 /**
  * Created by didiwei on 2022/5/12
  * desc: SharedPreference工具类
+ *
+ * 因为目前demo还没有设置语言的功能，所以与SP加载本地保存语言的相关操作其实目前都用不上
  */
 public class SpUtil {
     private static final String APP_SP = "app_sp";

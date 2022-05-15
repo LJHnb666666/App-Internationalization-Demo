@@ -18,6 +18,7 @@ import java.util.Locale;
  * desc: 用于设置保存语言以及获取当前语言，重启App等操作
  *
  * 因为目前demo还没有设置语言的功能，所以与SP加载本地保存语言的相关操作其实目前都用不上，只用到了 加载系统默认的语言类型 这个功能。
+ * 也就是说，目前demo的语言只和手机系统语言相一致
  */
 public class LocaleUtil {
     /**
@@ -46,7 +47,6 @@ public class LocaleUtil {
      * @param context
      */
     public static void changeAppLanguage(Context context) {
-        Log.v("ljh","进入了changeAppLanguage方法");
         if (context == null) return;
 
         Context appContext = context.getApplicationContext();
@@ -54,17 +54,13 @@ public class LocaleUtil {
         Locale myLocale;        // 0 简体中文 1 English
         switch (currentLanguage) {
              case 0:
-                 Log.v("ljh","设置为简体中文");
                  myLocale = Locale.SIMPLIFIED_CHINESE;
                  break;
              case 1:
-                 Log.v("ljh","设置为英文");
                  myLocale = Locale.ENGLISH;
                  break;
              default:
-                 Log.v("ljh","设置为系统默认语言");
                  myLocale = appContext.getResources().getConfiguration().locale;
-                 Log.v("ljh","系统默认语言为" + myLocale);
                  break;
         }
 
