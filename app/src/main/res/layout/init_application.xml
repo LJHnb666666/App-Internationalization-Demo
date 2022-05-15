@@ -21,7 +21,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:checked="true"
-        android:text="作为移动应用运行"/>
+        android:text="@string/RUN_AS_MOBILE_APP"/>
 
     <RadioButton
         android:id="@+id/btn_as_dev"
@@ -30,7 +30,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:checked="false"
-        android:text="作为IoT设备运行"/>
+        android:text="@string/RUN_AS_IoT_DEVICE"/>
 
     </RadioGroup>
 
@@ -42,7 +42,7 @@
         android:layout_marginTop="160dp"
         android:layout_marginLeft="20dp"
         android:checked="false"
-        android:text="双讲通话"/>
+        android:text="@string/DUAL_TALK"/>
 
 
 </RelativeLayout>

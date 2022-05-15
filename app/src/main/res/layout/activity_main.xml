@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:hint="请输入账号"
+        android:hint="@string/INPUT_ACCOUNT"
         android:inputType="textWebEditText"
         android:lines="1"
         android:textSize="16sp" />
@@ -25,7 +25,7 @@
         android:layout_below="@+id/et_account"
         android:layout_marginStart="100dp"
         android:layout_marginTop="136dp"
-        android:text="登录" />
+        android:text="@string/LOG_IN" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_register"
@@ -34,7 +34,7 @@
         android:layout_below="@+id/et_account"
         android:layout_marginStart="100dp"
         android:layout_marginTop="17dp"
-        android:text="注册" />
+        android:text="@string/REGISTER" />
 
 
 </RelativeLayout>

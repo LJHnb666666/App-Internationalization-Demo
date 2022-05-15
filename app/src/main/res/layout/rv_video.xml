@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="视频标题"
+        android:text="@string/VIDEO_TITLE"
         app:layout_constraintLeft_toRightOf="@+id/iv"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="事件时间"
+        android:text="@string/ENENT_TIME"
         app:layout_constraintLeft_toRightOf="@id/iv"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="事件类型"
+        android:text="@string/EVENT_TYPE"
         app:layout_constraintLeft_toRightOf="@id/iv"
         app:layout_constraintTop_toBottomOf="@+id/tv_action_time" />
 

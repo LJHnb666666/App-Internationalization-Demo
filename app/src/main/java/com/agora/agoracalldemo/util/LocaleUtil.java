@@ -64,6 +64,7 @@ public class LocaleUtil {
              default:
                  Log.v("ljh","设置为系统默认语言");
                  myLocale = appContext.getResources().getConfiguration().locale;
+                 Log.v("ljh","系统默认语言为" + myLocale);
                  break;
         }
 

@@ -63,7 +63,7 @@
         android:id="@+id/bt_rtc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="实时通话"
+        android:text="@string/LIVE_CALL"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 

@@ -41,7 +41,7 @@
     <!--设备名称-->
     <string name="EQUIPMENT_NAME">设备名称</string>
     <!--网络状态-->
-    <string name="NETWORK_STATUS">网络状态</string>
+    <string name="NETWORK_STATUS">网络状态:</string>
     <!--账号-->
     <string name="ACCOUNT">账号:</string>
     <!--状态-->
@@ -50,6 +50,12 @@
     <string name="CALL">呼叫:</string>
     <!--正常-->
     <string name="NORMAL">正常</string>
+    <!--注册-->
+    <string name="REGISTER">注册</string>
+    <!--登录-->
+    <string name="LOG_IN">登录</string>
+    <!--接听-->
+    <string name="ANSWER">接听</string>
     <!--分辨率-->
     <string name="RESOLVING_POWER">分辨率</string>
     <!--帧率-->
@@ -88,8 +94,18 @@
     <string name="CANCEL">取消</string>
     <!--呼叫通知-->
     <string name="CALL_NOTIFICATION">呼叫通知</string>
+    <!--呼叫设备-->
+    <string name="CALL_EQUIPMENT">呼叫设备</string>
+    <!--呼叫用户-->
+    <string name="CALL_USER">呼叫用户</string>
     <!--正在呼叫-->
     <string name="CALLING">正在呼叫</string>
+    <!--绑定设备-->
+    <string name="BIND_EQUIPMENT">绑定设备</string>
+    <!--解绑设备-->
+    <string name="UNBIND_EQUIPMENT">解绑设备</string>
+    <!--刷新设备-->
+    <string name="REFRESH_EQUIPMENT">刷新设备</string>
     <!--通话中-->
     <string name="ON_THE_PHONE">通话中</string>
     <!--登出中-->
@@ -102,6 +118,8 @@
     <string name="LOGGING_AUTO">自动登陆中...</string>
     <!--正在初始化-->
     <string name="INITIALIZING">正在初始化...</string>
+    <!--退出登录-->
+    <string name="LOGGOUT">退出登录</string>
     <!--不能登出-->
     <string name="UNABLE_TO_LOGGING_OUT">不能登出</string>
     <!--登出失败-->
@@ -144,6 +162,8 @@
     <string name="CURRENT_USER_ACCOUNT">当前用户账号:</string>
     <!--要呼叫的用户或设备账号-->
     <string name="USER_OR_EQUIPMENT_ACCOUNT_TO_CALL">要呼叫的用户或设备账号:</string>
+    <!--输入要呼叫的账号-->
+    <string name="ENTER_THE_ACCOUNT_TO_CALL">输入要呼叫的账号</string>
     <!--输入要绑定的设备ID:-->
     <string name="ENTER_THE_EQUIPMENT_ID_TO_BIND">输入要绑定的设备ID: </string>
     <!--输入要解除绑定的设备ID:-->
@@ -176,12 +196,46 @@
     <string name="RECEIVE_FROM">接收到来自:</string>
     <!--的告警信息-->
     <string name="ALARM_MESSAGE">的告警消息: </string>
+    <!--告警触发-->
+    <string name="ALARM_TRIGGER">告警触发</string>
+    <!--告警查询-->
+    <string name="ALARM_QUERY">告警查询</string>
     <!--开始启动云录制-->
     <string name="START_CLOUD_RECORDING">开始启动云录制......</string>
     <!--云录制结束，文件列表：-->
     <string name="CLOUD_RECORDING_FINISHED_AND_FILE_LIST">云录制结束，文件列表：</string>
     <!--设置音频格式-->
     <string name="FORMAT_AUDIO">设置音频格式</string>
+    <!--音频编码格式-->
+    <string name="AUDIO_CODING_FORMAT">音频编码格式:</string>
     <!--设置私参-->
     <string name="SET_PRIVATE_PARAMETER">设置私参</string>
+    <!--输入要设置的私有参数-->
+    <string name="ENTER_PRIVATE_PARAM_TO_BE_SET">输入要设置的私有参数</string>
+    <!--请输入账号-->
+    <string name="INPUT_ACCOUNT">请输入账号</string>
+    <!--有人按门铃-->
+    <string name="SOMEONE_RING_DOORBELL">有人按门铃</string>
+    <!--实时通话-->
+    <string name="LIVE_CALL">实时通话</string>
+    <!--第一个设备ID-->
+    <string name="FIRST_DEVICE_ID">第一个设备ID:</string>
+    <!--第二个设备ID-->
+    <string name="SECOND_DEVICE_ID">第二个设备ID:</string>
+    <!--第三个设备ID-->
+    <string name="THIRD_DEVICE_ID">第三个设备ID:</string>
+    <!--作为移动应用运行-->
+    <string name="RUN_AS_MOBILE_APP">作为移动应用运行</string>
+    <!--作为IOT设备运行-->
+    <string name="RUN_AS_IoT_DEVICE">作为IoT设备运行</string>
+    <!--双讲通话-->
+    <string name="DUAL_TALK">双讲通话</string>
+    <!--视频标题-->
+    <string name="VIDEO_TITLE">视频标题</string>
+    <!--事件时间-->
+    <string name="ENENT_TIME">事件时间</string>
+    <!--事件类型-->
+    <string name="EVENT_TYPE">事件类型</string>
+    <!--智能门铃-->
+    <string name="SMART_DOORBELL">智能门铃</string>
 </resources>

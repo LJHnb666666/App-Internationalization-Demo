@@ -5,28 +5,28 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/editTextLocalAccount"
-        android:layout_width="200dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="当前用户账号: "
+        android:layout_marginTop="30dp"
+        android:text="@string/CURRENT_USER_ACCOUNT"
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
+        android:layout_marginLeft="300dp"
         android:layout_marginTop="20dp"
-        android:text="退出登录" />
+        android:text="@string/LOGGOUT" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextCallAccount"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="100dp"
-        android:hint="输入要呼叫的账号"
+        android:hint="@string/ENTER_THE_ACCOUNT_TO_CALL"
         android:inputType="textWebEditText"
         android:lines="1"
         android:textSize="16sp" />
@@ -35,9 +35,9 @@
         android:id="@+id/btn_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
+        android:layout_marginStart="300dp"
         android:layout_marginTop="100dp"
-        android:text="呼叫" />
+        android:text="@string/CALL" />
 
     <RadioGroup
         android:orientation="horizontal"
@@ -53,8 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="呼叫设备"
-            android:textSize="12pt"
+            android:text="@string/CALL_EQUIPMENT"
+            android:textSize="8pt"
             android:checked="true"/>
 
         <RadioButton
@@ -62,34 +62,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:text="呼叫用户"
-            android:textSize="12pt"/>
+            android:text="@string/CALL_USER"
+            android:textSize="8pt"/>
 
     </RadioGroup>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    </RadioGroup>
     <Button
         android:id="@+id/btn_dev_bind"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="220dp"
-        android:text="绑定设备" />
+        android:text="@string/BIND_EQUIPMENT"
+        android:textSize="5pt"/>
 
     <Button
         android:id="@+id/btn_dev_unbind"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="130dp"
         android:layout_marginTop="220dp"
-        android:text="解绑设备" />
+        android:text="@string/UNBIND_EQUIPMENT"
+        android:textSize="5pt"/>
 
     <Button
         android:id="@+id/btn_dev_refresh"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="260dp"
         android:layout_marginTop="220dp"
-        android:text="刷新设备" />
+        android:text="@string/REFRESH_EQUIPMENT"
+        android:textSize="5pt"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -106,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="580dp"
-        android:text="设置" />
+        android:text="@string/SET" />
 
     <Button
         android:id="@+id/btn_alarm_trigger"
@@ -114,14 +121,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="580dp"
-        android:text="告警触发" />
+        android:text="@string/ALARM_TRIGGER" />
 
     <Button
         android:id="@+id/btn_alarm_query"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
         android:layout_marginTop="580dp"
-        android:text="告警查询" />
+        android:text="@string/ALARM_QUERY" />
 
 </RelativeLayout>

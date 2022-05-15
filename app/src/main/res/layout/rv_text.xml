@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textColor="#d9000000"
-        android:text="网络状态: "
+        android:text="@string/NETWORK_STATUS"
         app:layout_constraintLeft_toRightOf="@+id/iv_head"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="正常"
+        android:text="@string/NORMAL"
         app:layout_constraintLeft_toRightOf="@id/tv_prompt"
         app:layout_constraintTop_toTopOf="parent" />
 

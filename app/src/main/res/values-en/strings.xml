@@ -7,7 +7,7 @@
     <!--设备名称-->
     <string name="EQUIPMENT_NAME">equipment Name</string>
     <!--网络状态-->
-    <string name="NETWORK_STATUS">network Status</string>
+    <string name="NETWORK_STATUS">network Status:</string>
     <!--账号-->
     <string name="ACCOUNT">account number:</string>
     <!--状态-->
@@ -16,6 +16,12 @@
     <string name="CALL">call:</string>
     <!--正常-->
     <string name="NORMAL">normal</string>
+    <!--注册-->
+    <string name="REGISTER">register</string>
+    <!--登录-->
+    <string name="LOG_IN">log in</string>
+    <!--接听-->
+    <string name="ANSWER">answer</string>
     <!--分辨率-->
     <string name="RESOLVING_POWER">resolving power</string>
     <!--帧率-->
@@ -54,8 +60,18 @@
     <string name="CANCEL">cancel</string>
     <!--呼叫通知-->
     <string name="CALL_NOTIFICATION">call notification</string>
+    <!--呼叫设备-->
+    <string name="CALL_EQUIPMENT">call equipment</string>
+    <!--呼叫用户-->
+    <string name="CALL_USER">call user</string>
     <!--正在呼叫-->
     <string name="CALLING">calling</string>
+    <!--绑定设备-->
+    <string name="BIND_EQUIPMENT">bind equipmnt</string>
+    <!--解绑设备-->
+    <string name="UNBIND_EQUIPMENT">unbind equipmnt</string>
+    <!--刷新设备-->
+    <string name="REFRESH_EQUIPMENT">refresh equipment</string>
     <!--通话中-->
     <string name="ON_THE_PHONE">on the phone</string>
     <!--登出中-->
@@ -68,6 +84,8 @@
     <string name="LOGGING_AUTO">automatic login in progress...</string>
     <!--正在初始化-->
     <string name="INITIALIZING">initializing...</string>
+    <!--退出登录-->
+    <string name="LOGGOUT">Log out</string>
     <!--不能登出-->
     <string name="UNABLE_TO_LOGGING_OUT">Cannot log out</string>
     <!--登出失败-->
@@ -110,6 +128,8 @@
     <string name="CURRENT_USER_ACCOUNT">current user account:</string>
     <!--要呼叫的用户或设备账号-->
     <string name="USER_OR_EQUIPMENT_ACCOUNT_TO_CALL">user or device account to call:</string>
+    <!--输入要呼叫的账号-->
+    <string name="ENTER_THE_ACCOUNT_TO_CALL">Enter the account to call</string>
     <!--输入要绑定的设备ID:-->
     <string name="ENTER_THE_EQUIPMENT_ID_TO_BIND">Enter the device ID to bind: </string>
     <!--输入要解除绑定的设备ID:-->
@@ -142,12 +162,46 @@
     <string name="RECEIVE_FROM">Received from:</string>
     <!--的告警信息-->
     <string name="ALARM_MESSAGE">warning message: </string>
+    <!--告警触发-->
+    <string name="ALARM_TRIGGER">alarm trigger</string>
+    <!--告警查询-->
+    <string name="ALARM_QUERY">alarm query</string>
     <!--开始启动云录制-->
     <string name="START_CLOUD_RECORDING">Start cloud recording......</string>
     <!--云录制结束，文件列表：-->
     <string name="CLOUD_RECORDING_FINISHED_AND_FILE_LIST">Cloud recording is over, the file list is：</string>
     <!--设置音频格式-->
     <string name="FORMAT_AUDIO">Set audio format</string>
+    <!--音频编码格式-->
+    <string name="AUDIO_CODING_FORMAT">audio coding format:</string>
     <!--设置私参-->
     <string name="SET_PRIVATE_PARAMETER">Set up private parameters</string>
+    <!--输入要设置的私有参数-->
+    <string name="ENTER_PRIVATE_PARAM_TO_BE_SET">Enter the private parameters to be set</string>
+    <!--请输入账号-->
+    <string name="INPUT_ACCOUNT">Please input Username</string>
+    <!--有人按门铃-->
+    <string name="SOMEONE_RING_DOORBELL">Someone rings the doorbell</string>
+    <!--实时通话-->
+    <string name="LIVE_CALL">live call</string>
+    <!--第一个设备ID-->
+    <string name="FIRST_DEVICE_ID">first device id:</string>
+    <!--第二个设备ID-->
+    <string name="SECOND_DEVICE_ID">second device id:</string>
+    <!--第三个设备ID-->
+    <string name="THIRD_DEVICE_ID">third device id:</string>
+    <!--作为移动应用运行-->
+    <string name="RUN_AS_MOBILE_APP">Runs as a mobile app</string>
+    <!--作为IOT设备运行-->
+    <string name="RUN_AS_IoT_DEVICE">Runs as an IoT device</string>
+    <!--双讲通话-->
+    <string name="DUAL_TALK">dual talk</string>
+    <!--视频标题-->
+    <string name="VIDEO_TITLE">video title</string>
+    <!--事件时间-->
+    <string name="ENENT_TIME">event time</string>
+    <!--事件类型-->
+    <string name="EVENT_TYPE">event type</string>
+    <!--智能门铃-->
+    <string name="SMART_DOORBELL">smart doorbell</string>
 </resources>
